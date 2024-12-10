@@ -1,0 +1,47 @@
+.card:hover {
+    transform: translate(0%);
+}
+
+.watch-page .watch-icons {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.watch-icons i:hover {
+    cursor: pointer;
+}
+
+.watch-page #more {
+    display: none;
+}
+
+.public-comments .form-control:focus {
+    box-shadow: none;
+}
+
+.card-inner {
+    display: none;
+}
+
+time {
+    left: 24px;
+}
+
+@media (min-width:992px) {
+    time {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:1062px) {
+    #readMore {
+        margin-bottom: 60px !important;
+    }
+}
+
+@media (max-width:570px) {
+    .reply-time {
+        font-size: 10px;
+    }
+}

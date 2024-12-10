@@ -1,0 +1,41 @@
+.banner .social-media {
+    bottom: 18px;
+    left: 20px;
+}
+
+.banner .follow {
+    bottom: 18px;
+    right: 18px;
+}
+
+.banner .follow .btn {
+    color: var(--white) !important;
+    background-color: var(--base-color) !important;
+}
+
+.channel-page .video-section .card {
+    transform: translate(0%);
+}
+
+.channel-page .card .card-icon {
+    position: relative;
+}
+
+time {
+    font-size: 13px;
+}
+
+@media (max-width: 593px) {
+    .channel-page .navbar-nav .nav-link {
+        font-size: 13px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
+@media (max-width: 991px) {
+    .channel-page .navbar-nav .nav-link {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}

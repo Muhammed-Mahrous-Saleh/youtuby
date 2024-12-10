@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "cairofont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+:root {
+    --base-color: #bf40bf;
+    --white-color: #fff;
+    --black-color: #000;
+    --layer-color: #5a5a5a34;
+    --layer-color2: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: "cairofont", Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+}
+
+a {
+    color: var(--black-color);
+    text-decoration: none !important;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    visibility: hidden;
+    position: fixed;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.layer.toggle {
+    visibility: visible;
+    background-color: var(--layer-color);
+}
+
+.btn {
+    background-color: transparent !important;
+    color: var(--base-color) !important;
+    border-color: var(--base-color) !important;
+    box-shadow: none !important;
+}
+
+.btn:hover {
+    background-color: var(--base-color) !important;
+    color: var(--white-color) !important;
+    border-color: var(--base-color) !important;
+}
+
+.navbar {
+    z-index: 100;
+}
+
+.container-fluid {
+    padding: 0;
+    overflow: hidden;
+}
+
+#top-menu .bg-light {
+    background-color: var(--white-color) !important;
+}
+
+#top-menu .video-icon {
+    background-color: var(--base-color);
+    color: var(--white-color);
+    border-radius: 15%;
+}
+
+.navbar .navbar-nav {
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-item.active>.nav-link {
+    background-color: var(--base-color);
+    color: var(--white-color);
+}
+
+a.sign-in-btn {
+    color: var(--base-color) !important;
+}
+
+.modal .close:hover {
+    color: var(--base-color) !important;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+    border-color: var(--base-color);
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card .card-title {
+    height: 50px;
+    overflow: hidden;
+}
+
+.card .card-icons {
+    position: relative;
+}
+
+time {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    padding: 0 3px;
+}
+
+.card .fa-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    transition: 0.5s;
+}
+
+
+
+.card:hover {
+    transform: translateY(-0.9%);
+}
+
+.card:hover .fa-play {
+    color: #2c3131c7;
+}
+
+.card .card-horizontal .card-body p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .card-horizontal .card-body {
+    min-width: 0px;
+}
+
+#top-menu .fa-bars {
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: 0.5s;
+    height: 90%;
+    overflow: hidden;
+    background-color: var(--white-color);
+}
+
+.sidebar:hover {
+    overflow-y: scroll;
+}
+
+
+
+.sidebar a>i {
+    color: var(--base-color);
+}
+
+.sidebar a:hover,
+.sidebar a:hover>i {
+    color: var(--white-color);
+    background-color: var(--base-color);
+}
+
+.sidebar a {
+    width: 17rem;
+}
+
+.sidebar.toggle {
+    transform: translateX(0%);
+}
+
+
+
+.sidebar::-webkit-scrollbar {
+    background: rgb(230, 230, 230);
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgb(179, 179, 179);
+    width: 8px;
+}
+
+.navbar .search-icon {
+    color: var(--base-color);
+    cursor: pointer;
+    padding: 15px 10px;
+    position: absolute;
+    top: 15px;
+    left: 132px;
+    display: none;
+}
+
+.navbar .search-icon:hover {
+    color: var(--white-color);
+    background-color: var(--base-color);
+}
+
+.search-input {
+    position: fixed;
+    top: 72px;
+    right: 0;
+    border: none;
+    padding: 6px 23px;
+    height: 60px;
+    background-color: #efeeee;
+    display: none;
+    z-index: 1;
+    width: 100%;
+}
+
+.search-input:focus {
+    background-color: #efeeee;
+}
+
+@media (max-width:1155px) {
+    .navbar .collapse .form-inline {
+        display: none;
+    }
+
+    .navbar .search-icon {
+        display: inline;
+    }
+
+}
+
+@media (min-width:1155px) {
+    .search-input {
+        display: none !important;
+    }
+}
