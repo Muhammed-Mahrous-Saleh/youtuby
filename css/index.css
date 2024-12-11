@@ -73,8 +73,12 @@ a {
     justify-content: space-between;
 }
 
+.navbar .navbar-nav .nav-link {
+    /* padding-inline: 0 !important; */
+}
+
 .navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-item.active>.nav-link {
+.navbar .navbar-nav .nav-item.active > .nav-link {
     background-color: var(--base-color);
     color: var(--white-color);
 }
@@ -123,8 +127,6 @@ time {
     transition: 0.5s;
 }
 
-
-
 .card:hover {
     transform: translateY(-0.9%);
 }
@@ -161,14 +163,12 @@ time {
     overflow-y: scroll;
 }
 
-
-
-.sidebar a>i {
+.sidebar a > i {
     color: var(--base-color);
 }
 
 .sidebar a:hover,
-.sidebar a:hover>i {
+.sidebar a:hover > i {
     color: var(--white-color);
     background-color: var(--base-color);
 }
@@ -180,8 +180,6 @@ time {
 .sidebar.toggle {
     transform: translateX(0%);
 }
-
-
 
 .sidebar::-webkit-scrollbar {
     background: rgb(230, 230, 230);
@@ -196,11 +194,17 @@ time {
 .navbar .search-icon {
     color: var(--base-color);
     cursor: pointer;
-    padding: 15px 10px;
-    position: absolute;
-    top: 15px;
-    left: 132px;
+    padding: 15px 0;
+    /* position: absolute; */
+    /* top: 15px; */
+    /* left: 132px; */
     display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar .sign-in-btn {
+        padding-inline: 0;
+    }
 }
 
 .navbar .search-icon:hover {
@@ -225,7 +229,7 @@ time {
     background-color: #efeeee;
 }
 
-@media (max-width:1155px) {
+@media (max-width: 1155px) {
     .navbar .collapse .form-inline {
         display: none;
     }
@@ -233,10 +237,9 @@ time {
     .navbar .search-icon {
         display: inline;
     }
-
 }
 
-@media (min-width:1155px) {
+@media (min-width: 1155px) {
     .search-input {
         display: none !important;
     }
