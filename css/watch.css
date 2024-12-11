@@ -20,6 +20,17 @@
     box-shadow: none;
 }
 
+@media screen and (max-width: 575px) {
+    .public-comments .card .row {
+        flex-direction: column;
+    }
+
+    .public-comments .image {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
 .card-inner {
     display: none;
 }
@@ -28,19 +39,19 @@ time {
     left: 24px;
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
     time {
         font-size: 13px;
     }
 }
 
-@media (max-width:1062px) {
+@media (max-width: 1062px) {
     #readMore {
         margin-bottom: 60px !important;
     }
 }
 
-@media (max-width:570px) {
+@media (max-width: 570px) {
     .reply-time {
         font-size: 10px;
     }
